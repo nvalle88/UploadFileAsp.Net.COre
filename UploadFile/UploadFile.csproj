@@ -3,18 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PackageId>UploadFileAsp.Net.Core</PackageId>
-    <Authors>Nestor Valle</Authors>
+    <Authors>Nestor Valle, Brian Molina</Authors>
     <Company>Digital Strategy Ecuador</Company>
     <Product>UploadFileAsp.Net.Core</Product>
     <PackageProjectUrl>https://github.com/nvalle88/UploadFileAsp.Net.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nvalle88/UploadFileAsp.Net.Core</RepositoryUrl>
-    <PackageIconUrl>https://www.facebook.com/digitalstrategyec/</PackageIconUrl>
+    <PackageIconUrl>https://scontent.fuio1-1.fna.fbcdn.net/v/t1.0-9/15966013_176934256120990_4149992798005534151_n.png?oh=adbb2455719e6a46804813b530898e7a&amp;oe=5B238EAA</PackageIconUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
-    <FileVersion>1.0.6.0</FileVersion>
-    <Version>1.0.6</Version>
+    <AssemblyVersion>1.0.7.0</AssemblyVersion>
+    <FileVersion>1.0.7.0</FileVersion>
+    <Version>1.0.7</Version>
     <NeutralLanguage>C# Net Core 1.0.1</NeutralLanguage>
+    <PackageTags>Upload, File, Net, Core, Subir, Archivos</PackageTags>
+    <Copyright>MIT</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -4,8 +4,8 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using UploadFile.Utils;
-using UploadFile.Helpes;
 using Microsoft.AspNetCore.Mvc;
+using UploadFile.Helpers;
 
 namespace UploadFile.Services
 {
@@ -18,7 +18,7 @@ namespace UploadFile.Services
         /// <param name="folderNameServer">Destination folder on the web server</param>
         /// <param name="webRootPath">Path where the application is hosted</param>
         /// <returns></returns>
-        public static async Task<bool> UploadFiles(List<IFormFile> files,string folderName, string webRootPath)
+        public static async Task<bool> UploadFile(List<IFormFile> files,string folderName, string webRootPath)
         {
             var targetDirectory = Path.Combine(webRootPath, folderName);
             if (! System.IO.File.Exists(targetDirectory))
@@ -29,24 +29,24 @@ namespace UploadFile.Services
             foreach (var file in files)
             {
                 var dataFile =FileHelper.GetDataFile(file);
-                await UploadFile(dataFile, folderName, webRootPath);
+                await _UploadFile(dataFile, folderName, webRootPath);
             }
             
             return true;
         }
 
-        public static async Task<bool> UploadOneFile(DataFile file, string folderName, string webRootPath)        
+        public static async Task<bool> UploadFile(DataFile file, string folderName, string webRootPath)        
         {
             var targetDirectory = Path.Combine(webRootPath, folderName);
             if (!System.IO.File.Exists(targetDirectory))
             {
                 Directory.CreateDirectory(targetDirectory);
             }           
-                await UploadFile(file, folderName, webRootPath);           
+                await _UploadFile(file, folderName, webRootPath);           
             return true;
         }
 
-        private static async Task<bool> UploadFile(DataFile file, string folderServer, string WebRootPath)
+        private static async Task<bool> _UploadFile(DataFile file, string folderServer, string WebRootPath)
         {
 
             try

@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using UploadFile.Utils;
 
-namespace UploadFile.Helpes
+namespace UploadFile.Helpers
 {
 
     public static class FileHelper
