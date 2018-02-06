@@ -8,6 +8,6 @@ namespace UploadFile.Utils
     {
         public const string True= "True";
         public const string False = "False";
-        public const string NotExistDirectoryServer = "Not Exist the directory than Server";
+        public const string NotExistDirectoryServer = "No existe el directorio en el servidor";
     }
 }

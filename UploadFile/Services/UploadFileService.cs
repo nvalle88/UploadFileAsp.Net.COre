@@ -35,6 +35,17 @@ namespace UploadFile.Services
             return true;
         }
 
+        public static async Task<bool> UploadOneFile(DataFile file, string folderName, string webRootPath)        
+        {
+            var targetDirectory = Path.Combine(webRootPath, folderName);
+            if (!System.IO.File.Exists(targetDirectory))
+            {
+                Directory.CreateDirectory(targetDirectory);
+            }           
+                await UploadFile(file, folderName, webRootPath);           
+            return true;
+        }
+
         private static async Task<bool> UploadFile(DataFile file, string folderServer, string WebRootPath)
         {
 
