@@ -14,13 +14,14 @@ var uploadFiles = await UploadFile.Services.UploadFileService.UploadFile(files, 
 //las respuesta seran un boleano
 ```
 la clase DataFile para el envio de archivos
----csharp
+```csharp
 public class DataFile
     {
         public string Name { get; set; }
         public string Extension { get; set; }
         public byte[] FileData { get; set; }
     }
----
+```
+
 
 ![alt tag](https://github.com/nvalle88/ServiciosWeb/blob/master/DS.png)
