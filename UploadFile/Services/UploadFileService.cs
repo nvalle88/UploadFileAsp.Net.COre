@@ -18,6 +18,7 @@ namespace UploadFile.Services
         /// <param name="folderNameServer">Destination folder on the web server</param>
         /// <param name="webRootPath">Path where the application is hosted</param>
         /// <returns></returns>
+        
         public static async Task<bool> UploadFile(List<IFormFile> files,string folderName, string webRootPath)
         {
             var targetDirectory = Path.Combine(webRootPath, folderName);
